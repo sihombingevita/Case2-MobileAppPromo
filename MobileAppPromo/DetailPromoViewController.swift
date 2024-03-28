@@ -6,24 +6,29 @@
 //
 
 import UIKit
+import WebKit
 
-class DetailPromoViewController: UIViewController {
+class DetailPromoViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
+    var articleLink: String?
+    var promo: Promo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        webView = WKWebView(frame: view.bounds)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(webView)
+        
+        // load the article
+        if let link = articleLink, let url = URL(string: link) {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("Failed to load webpage: \(error.localizedDescription)")
     }
-    */
 
 }

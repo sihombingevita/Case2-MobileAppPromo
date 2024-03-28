@@ -11,7 +11,6 @@ import Alamofire
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     private var promos = [Promo]()
     
     override func viewDidLoad() {
@@ -50,12 +49,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = tableView.cellForRow(at: indexPath)
+        let selectedPromo = promos[indexPath.row].detailURL
+        let link = selectedPromo
         
         let detailViewController = DetailPromoViewController()
-        
-        navigationController?.pushViewController(detailViewController, animated: true)
-        
+        detailViewController.articleLink = link
+        present(detailViewController, animated: true, completion: nil)
     }
 }
 
