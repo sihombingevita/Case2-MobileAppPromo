@@ -54,7 +54,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
         let detailViewController = DetailPromoViewController()
         detailViewController.articleLink = link
-        present(detailViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

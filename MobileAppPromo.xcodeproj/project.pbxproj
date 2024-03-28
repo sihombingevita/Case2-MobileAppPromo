@@ -54,6 +54,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FED4AB22BB5A50000EE0655 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FD2DDC72BB52E8000540755 /* Promo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FED4AB32BB5A51900EE0655 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F3F948F2BB3F1EF0074FE4F /* DetailPromoViewController.xib */,
+				0FF634E72BB3CEFC008CFAFF /* LaunchScreen.storyboard */,
+				0FF634E22BB3CEFB008CFAFF /* Main.storyboard */,
+				0FED4AB62BB5A6EF00EE0655 /* TableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FED4AB42BB5A51E00EE0655 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0F3F94942BB3F8010074FE4F /* PromoService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0FED4AB62BB5A6EF00EE0655 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F3F948A2BB3EEFE0074FE4F /* ListPromoTableViewCell.swift */,
+				0F3F948B2BB3EEFE0074FE4F /* ListPromoTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		0FED4AB72BB5B36300EE0655 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F3F948E2BB3F1EF0074FE4F /* DetailPromoViewController.swift */,
+				0FF634E02BB3CEFB008CFAFF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0FF634D02BB3CEFB008CFAFF = {
 			isa = PBXGroup;
 			children = (
@@ -75,19 +120,14 @@
 		0FF634DB2BB3CEFB008CFAFF /* MobileAppPromo */ = {
 			isa = PBXGroup;
 			children = (
+				0FED4AB72BB5B36300EE0655 /* Controller */,
+				0FED4AB42BB5A51E00EE0655 /* Networking */,
+				0FED4AB32BB5A51900EE0655 /* View */,
+				0FED4AB22BB5A50000EE0655 /* Model */,
 				0FF634DC2BB3CEFB008CFAFF /* AppDelegate.swift */,
 				0FF634DE2BB3CEFB008CFAFF /* SceneDelegate.swift */,
-				0FF634E02BB3CEFB008CFAFF /* ViewController.swift */,
-				0FF634E22BB3CEFB008CFAFF /* Main.storyboard */,
 				0FF634E52BB3CEFC008CFAFF /* Assets.xcassets */,
-				0FF634E72BB3CEFC008CFAFF /* LaunchScreen.storyboard */,
 				0FF634EA2BB3CEFC008CFAFF /* Info.plist */,
-				0F3F948A2BB3EEFE0074FE4F /* ListPromoTableViewCell.swift */,
-				0F3F948B2BB3EEFE0074FE4F /* ListPromoTableViewCell.xib */,
-				0F3F948E2BB3F1EF0074FE4F /* DetailPromoViewController.swift */,
-				0F3F948F2BB3F1EF0074FE4F /* DetailPromoViewController.xib */,
-				0F3F94942BB3F8010074FE4F /* PromoService.swift */,
-				0FD2DDC72BB52E8000540755 /* Promo.swift */,
 			);
 			path = MobileAppPromo;
 			sourceTree = "<group>";
